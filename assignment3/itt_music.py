@@ -57,5 +57,5 @@ plt.text(
 )
 
 plt.tight_layout()
-plt.savefig("music_sync_plot.png", dpi=300)
+plt.savefig("music_plot.png", dpi=300)
 plt.show()

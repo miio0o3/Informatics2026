@@ -60,7 +60,7 @@ IITでは、システム全体の情報が、独立した部分の情報に単�
 
 次のコマンドでPythonファイルを実行します。
 
-`python iit_music_sync.py`
+`python iit_music.py`
 
 ## 出力
 
@@ -68,7 +68,7 @@ IITでは、システム全体の情報が、独立した部分の情報に単�
 
 また、次の画像ファイルも保存されます。
 
-`music_sync_plot.png`
+`music_plot.png`
 
 ![音楽アンサンブルにおける同期の例](music_sync_plot.png)
 

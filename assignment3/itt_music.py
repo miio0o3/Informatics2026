@@ -1,7 +1,12 @@
 import itertools
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import font_manager as fm
 
+font_path = r"C:\Windows\Fonts\meiryo.ttc"
+fm.fontManager.addfont(font_path)
+plt.rcParams["font.family"] = fm.FontProperties(fname=font_path).get_name()
+plt.rcParams["axes.unicode_minus"] = False
 # Three musicians: A, B, C
 # Each musician has three possible timing states:
 # E = early, O = on beat, L = late
@@ -40,13 +45,13 @@ x = np.arange(len(states))
 width = 0.4
 
 plt.figure(figsize=(14, 6))
-plt.bar(x - width / 2, p_whole, width, label="Whole synchronized ensemble")
-plt.bar(x + width / 2, q_partitioned, width, label="Partitioned independent musicians")
+plt.bar(x - width / 2, p_whole, width, label="同期しているアンサンブル")
+plt.bar(x + width / 2, q_partitioned, width, label="独立した演奏者")
 
 plt.xticks(x, states, rotation=90)
-plt.xlabel("Future timing state of musicians A, B, C")
-plt.ylabel("Probability")
-plt.title("IIT Example: Synchronization in a Music Ensemble")
+plt.xlabel("演奏者の未来のタイミング状態")
+plt.ylabel("確率")
+plt.title("IITの例: 音楽のアンサンブルにおけるIIT")
 plt.legend()
 
 plt.text(
